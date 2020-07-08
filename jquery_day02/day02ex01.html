@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg {
+            background-color: yellow;
+        }
+        .horizontal {
+            float: left;
+            list-style-type: none;
+            margin: 10px;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('li>u').addClass('bg');
+            $('#myFavorites>li').addClass('horizontal');
+            $('#vue').on('click', function(){
+                alert(this.id)
+            });
+            $('.node').click('click', function(){
+                alert("node 프로그램");
+            });
+
+            // $('#myFavorites li').css({
+            //     backgroundColor: 'skyblue',
+            //     color: 'navy'
+            // });
+            var color = ['red','green','blue','orange'];
+            $('#myFavorites li').css('color', function(i, j, k){
+                return 'Orange';
+            });
+        });
+    </script>
+</head>
+<body>
+    <h3>관심사항</h3>
+    <ul id="myFavorites">
+        <li><u>javascript</u></li>
+        <li>jquery</li>
+        <li class="node">node.js</li>
+        <li id="vue">vue.js</li>
+    </ul>
+</body>
+</html>
